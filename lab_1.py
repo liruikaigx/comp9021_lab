@@ -8,5 +8,5 @@ max_temperature = 100
 step = 10
 print('Celsius\tFahrenheit')
 for celsius in range(min_temperature, max_temperature + step, step):
-    fahrenheit = celsius / 5 * 9 + 32
-    print(f'{celsius:7}\t{fahrenheit:10.0f}')
+    fahrenheit = celsius / 5 * 9 + 32              #Calculate the fahrenheit by celsius
+    print(f'{celsius:7}\t{fahrenheit:10.0f}')      #The width of celsius is 7 and the width of fahrenheit is 10 and keep no float
