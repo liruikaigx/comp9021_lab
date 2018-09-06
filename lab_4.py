@@ -35,16 +35,16 @@ L = [randint(-50, 50) for _ in range(nb_of_elements)]
 print('\nThe list is:', L)
 print()
 
-sort_L = sorted(L)
+sort_L = sorted(L)                                 #sort the list
 
 mean_s = 0
 for e in L:
     mean_s = mean_s + e
 mean_L = mean_s / nb_of_elements
 
-if nb_of_elements % 2 == 1:
-    median_L = float(sort_L[nb_of_elements//2])
-else:
+if nb_of_elements % 2 == 1:                        #if nb_of_element is odd 
+    median_L = float(sort_L[nb_of_elements//2])   
+else:                                              #if nb_of_element is even
     median_L = float(sort_L[nb_of_elements//2] + sort_L[nb_of_elements//2-1])/2
 
 pstdev_s = 0
