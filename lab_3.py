@@ -18,7 +18,7 @@ try:
 except ValueError:
     print('Input is not an integer, giving up.')
     sys.exit()
-if nb_of_elements <= 0:
+if nb_of_elements <= 0:                                            #Check whether the input is strictly positive
     print('Input should be strictly positive, giving up.')
     sys.exit()
 
@@ -29,12 +29,12 @@ print()
 
 quotient = [0] * 4
 for i in range(nb_of_elements):
-    quotient[L[i] // 5] += 1
-for i in range(4):
+    quotient[L[i] // 5] += 1                        #Every element in L divided by 5
+for i in range(4):                                  #find which range the element belongs to
     if quotient[i] == 0:
         print('There is no element', end = ' ')
     elif quotient[i] == 1:
         print('There is 1 element', end = ' ')
     else:
         print(f'There are {quotient[i]} elements', end = ' ')
-    print(f'between {i*5} and {i*5+4}.')
+    print(f'between {i*5} and {i*5+4}.')            #print the range
