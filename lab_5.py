@@ -5,7 +5,7 @@
 import sys
 from math import factorial
 
-def first_computation(x):
+def first_computation(x):               #check whether this number can be devided by 10, 100, 1000,...,10**i?
     nb_of_trailing_0s = 0
     for i in range(len(str(x))):
         if x % (10 ** i) != 0:
@@ -13,7 +13,7 @@ def first_computation(x):
             break
     return nb_of_trailing_0s
 
-def second_computation(x):
+def second_computation(x):              #transfer the integer into string and count the number of '0' in tail
     i = -1
     str_f = str(x)
     while i <= 0:
@@ -23,8 +23,8 @@ def second_computation(x):
             break
     return -i-1
     
-def third_computation(x):
-    nb_of_trailing_0s = 0
+def third_computation(x):               #Every 10 can be divided into 2*5 and the times of 2 is greater than 5
+    nb_of_trailing_0s = 0               #so the number of being divided by 10 can be transfered into divided by 5
     while x != 0:
         x //= 5
         nb_of_trailing_0s += x
