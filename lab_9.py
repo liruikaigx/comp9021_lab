@@ -13,9 +13,9 @@ for i in range(10, 100):
             str_j = str(j)
             str_k = str(k)
             str_prod = str(prod)
-            L = [str_i[0], str_i[1], str_j[0], str_j[1], str_k[0], str_k[1]]
+            L = [str_i[0], str_i[1], str_j[0], str_j[1], str_k[0], str_k[1]]#put all the numbers in i,j,k to L
             P = []
             for n in str_prod:
-                P.append(n)
-            if set(P) == set(L) and len(set(P)) == 6:
+                P.append(n)                                                 #put all the numbers in prod to P
+            if set(P) == set(L) and len(set(P)) == 6:                       #check
                 print(f'{i} x {j} x {k} = {prod} is a solution.')
