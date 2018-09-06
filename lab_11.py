@@ -21,18 +21,18 @@ while True:
 A_code = ord('A')
 c = A_code
 
-def print_space(n):
+def print_space(n):                                       #This function used to print space
     for i in range(n):
         print(' ', end="")
 
-def print_bletter(n):
+def print_bletter(n):                                     #This function used to print the letter before the middle letter
     for i in range(n-1):
         if c+i <= 90:
             print(chr(c+i), end="")
         else:
             print(chr((c+i-65)%26 + 65), end="")   
 
-def print_aletter(n):
+def print_aletter(n):                                     #This function used to print the letter after the middle letter
     if n == 1:
         print()
     else:
@@ -50,7 +50,7 @@ for i in range(1, height + 1):
     print_bletter(i)
     # Displays letters before middle column
     # Add your code here
-    print(chr(m+A_code), end="")
+    print(chr(m+A_code), end="")                           #print the middle letter
     # Displays middle column
     # Add your code here
     print_aletter(i)
