@@ -13,10 +13,10 @@
 def sum_ith_digits(arr, i):
     s = 0
     for num in arr: 
-        s = s + num // (10 ** i) % 10
+        s = s + num // (10 ** i) % 10      #sum up every integers in every column
     return s
 
-def check1(num1, num2):
+def check1(num1, num2):                    #check the product
     prod1 = (num2 % 10) * num1
     prod2 = (num2 // 10) * num1
     prod = prod1 + prod2 * 10
@@ -25,7 +25,7 @@ def check1(num1, num2):
     else:
         return False
 
-def check2(num1,num2):
+def check2(num1,num2):                     #check the sum up
     prod1 = (num2 % 10) * num1
     prod2 = (num2 // 10) * num1 * 10
     prod = prod1 + prod2
