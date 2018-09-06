@@ -27,9 +27,9 @@ max_element = 0
 min_element = 99
 for e in L:
     if e > max_element:
-        max_element = e
+        max_element = e      #Assignment of the max_value
 for s in L:
     if s < min_element:
-        min_element = s
+        min_element = s      #Assignment of the min_value
 print('\nThe maximum difference between largest and smallest values in this list is:', max_element - min_element)
 print('Confirming with builtin operations:', max(L) - min(L))
