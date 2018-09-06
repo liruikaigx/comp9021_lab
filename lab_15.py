@@ -11,7 +11,7 @@ letters = input('Please input a string of lowercase letters: ')
 letter_list = []
 
 
-for i in range(len(letters)):
+for i in range(len(letters)):                             #find sequent letter and add into a set
     letter_list.append(set(letters[i]))
     temp = i
     for j in range(i+1, len(letters)):
@@ -22,10 +22,10 @@ for i in range(len(letters)):
 index = 0
 for x in range(len(letter_list)-1):
     if len(letter_list[index]) < len(letter_list[x+1]):
-        index = x+1
+        index = x+1                                      #assign the longest length of sequent letters to index
 
 solution = ''
 for y in sorted(letter_list[index]):
-    solution = solution + y
+    solution = solution + y                              #print solution into a string
     
 print(f'The solution is: {solution}')
