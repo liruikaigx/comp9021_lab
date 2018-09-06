@@ -3,14 +3,14 @@
 # the sum of the n columns, and the sum of the two diagonals is constant,
 # hence equal to n(n^2+1)/2.
 
-def check1(square):
-    for i in range(len(square)):
+def check1(square):                                                        #check rows
+    for i in range(len(square)):                                        
         if sum(square[i]) == (len(square)*(len(square)*len(square)+1))/2:
             return True
         else:
             return False
 
-def check2(square):
+def check2(square):                                                        #check columns
     j_list = {}
     for i in range(len(square)):
         j_list[i] = []
@@ -24,7 +24,7 @@ def check2(square):
         else:
             return True
         
-def check3(square):
+def check3(square):                                                        #check Diagonal
     x_list = []
     y_list = []
     for a in range(len(square)):
@@ -39,14 +39,14 @@ def check3(square):
     else:
         return False
             
-def is_magic_square(square):
+def is_magic_square(square):                                              #ALL ABOVE True then magic square True
     if check1(square) == True and check2(square) == True and check3(square) == True:
         return True
     else:
         return False
         
 	
-def print_square(square):
+def print_square(square):                                                 #print square
     for i in range(len(square)):
         for j in range(len(square)):
             if j == len(square)-1:
